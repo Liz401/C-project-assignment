@@ -1,0 +1,30 @@
+/*determination on eligibility of a loan
+author ; Elizabeth Amondi 
+reg no ;
+*/
+#include<stdio.h>
+int main() {
+
+//determination of whether customer is Eligble for a loan or not 
+int age;
+int annualincome;
+//user to input the age and income details 
+
+printf("Enter age:");
+scanf("%d",&age);
+
+printf("Enter annual income");
+scanf("%d", &annualincome);
+
+//Determination of eligibility of the loan 
+if('age >= 21 & annual income>=21000'){
+printf("Congratulations you qualify for the loan\n");
+}else {
+printf("Unfortunately, we are unable.\n");
+}
+return 0;
+}
+
+
+
+    
