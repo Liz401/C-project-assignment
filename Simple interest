@@ -1,0 +1,25 @@
+//Calculation of simple interest 
+#include<stdio.h>
+int main () {
+
+/*simple interest should accept the amount time and rate values*/
+
+int principleAmount;
+int time ;
+int rateValue;
+int simpleInterest=principleAmount*time*rateValue;
+
+/*the simple interest is found by multiplication of the principal amount by time by rate then divided by 100*/
+//therefore it will be
+
+printf("Enter principleAmount:");
+scanf("%d\n", &principleAmount);
+printf("Enter time:");
+scanf("%d\n",&time);
+printf("Enter rateValue");
+scanf("%d\n", &rateValue);
+printf("Enter simpleInterest");
+scanf("%d\n", &simpleInterest);
+//the output 
+return 0;
+}
