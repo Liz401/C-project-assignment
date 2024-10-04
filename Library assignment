@@ -1,0 +1,39 @@
+//program to calculate fine of overdue Libra books 
+#include<stdio.h>
+int main(){
+int bookId;
+int dueDate;
+int returnDate;
+double fineAmount;
+double fineRate;
+//we now get details from the user
+printf("Enter bookId:");
+scanf("%d",&bookId);
+
+printf("Enter dueDate");
+scanf("%d",&dueDate);
+printf("Enter returnDate");
+scanf("%d",& returnDate);
+/*we now need to determine the number of due days
+to get amount to be charged */
+int dueDays=returnDate-dueDate;
+
+//hence based on information given 
+if(dueDays<=7){
+fineRate=20;
+}if(dueDays<=14){
+fineRate=50;
+}else{
+fineRate=100;
+}
+//total amount of fine will be 
+fineAmount=dueDays*fineRate; 
+//Results 
+printf("Book ID:%d\n,bookId");
+printf("dueDate:%d\n, dueDate");
+printf("Return date:%d\n, returnDate");
+printf("Days overdue:%d\n,dueDays");
+printf("fineRate per day:%lf\n,fineRate");
+printf("Total fine amount:Ksh.%lf\n, fineAmount");
+return 0;
+}
