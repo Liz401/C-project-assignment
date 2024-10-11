@@ -1,0 +1,52 @@
+/*the program to calculate and display 
+the electricity 
+bill for a customer based on the units consumed*/
+#include<stdio.h>
+int main(){
+int customerId;
+char customerName;
+double unitsConsumed;
+double charge_per_unit;
+double sureCharge;
+double totalBill;
+double totalAmount=unitsConsumed*charge_per_unit;
+//user to input details 
+printf("Enter customer ID:");
+scanf("%d\n",&customerId);
+printf("Enter customerName:");
+scanf("%s\n",&customerName);
+printf("Enter units consumed");
+scanf("%lf\n",&unitsConsumed);
+//Based on information given
+if(unitsConsumed<=199){
+totalAmount=unitsConsumed*1.20;
+printf("your bill is%lf", totalAmount);
+}
+else if(unitsConsumed>=200&& unitsConsumed<400){
+totalAmount=unitsConsumed*1.50;
+printf("your bill is%lf",totalAmount);
+}
+else if(unitsConsumed>=400&& unitsConsumed<600){
+totalAmount=unitsConsumed*1.80;
+printf("your bill is%lf",totalAmount);
+}
+else if (unitsConsumed>=600){
+totalAmount=unitsConsumed*2.00;
+printf("your bill is%lf", totalAmount);
+}
+if(totalAmount>400){
+sureCharge=totalAmount*15/100;
+printf("your sureCharge is%lf", sureCharge);
+}
+else if(totalAmount>=100){
+printf("you are good%lf");
+}
+totalBill=sureCharge+totalAmount;
+printf("totalAmount%lf", totalAmount);
+printf("totalBill%lf",totalBill);
+printf("customerId%d",customerId);
+printf("customerName%s",customerName);
+printf("unitsConsumed%lf", unitsConsumed);
+return 0;
+}
+    
